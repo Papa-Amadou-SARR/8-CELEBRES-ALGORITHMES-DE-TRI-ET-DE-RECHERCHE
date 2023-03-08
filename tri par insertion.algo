@@ -1,0 +1,18 @@
+
+    FUNCTION tri(arr : ARRAY_OF INTEGER[];) : INTEGER
+    VAR
+        i: INTEGER;
+        j: INTEGER;
+        elt: INTEGER;
+
+    BEGIN
+        FOR i FROM 0 TO arr.length DO
+            elt:=arr[i]
+            j:=i
+            WHILE (j>0 AND arr[j-1]>elt) DO
+                arr[j]:=arr[j-1]
+                j:=j-1
+            END_WHILE
+            arr[j]:=elt
+        END_FOR
+    END
